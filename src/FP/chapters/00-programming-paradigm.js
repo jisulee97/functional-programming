@@ -18,7 +18,7 @@ const courses = [
   },
 ];
 
-console.log("원본 데이터\n", courses);
+// console.log("원본 데이터\n", courses);
 
 // 1. 과정 배열을 순환하여 각 과정 이름의 좌우 공백 제거
 // 2. 과정 배열을 순환하여 각 과정 이름 대문자화
@@ -56,7 +56,7 @@ for (let i = 0, l = updateCourses.length; i < l; ++i) {
   const course = updateCourses[i];
   course.name = course.name.toUpperCase();
 }
-console.log("변형된 데이터\n", updateCourses);
+// console.log("변형된 데이터\n", updateCourses);
 
 console.assert(
   !Object.is(courses, updateCourses),
@@ -77,10 +77,46 @@ const subjects = [
   },
 ];
 
-// 1. 객체 이름(name) 속성 좌우 공백 제거 함수 선언
-// 2. 객체 이름(name) 속성 대문자화 함수 선언
-// 3. 과목 이름 "좌우 공백 제거" → "대문자화" 후, 새로운 과목 배열 생성
+console.log("원본데이터\n", subjects);
 
+// 1. 객체 이름(name) 속성 좌우 공백 제거 함수 선언
+function toTrim(object) {
+  const o = { ...object };
+  o.name = o.name.trim();
+  return o;
+}
+
+// console.log(toTrim(subjects[0]));
+// console.log(toTrim(subjects[1]));
+
+// 2. 객체 이름(name) 속성 대문자화 함수 선언
+function toUpperCase(object) {
+  const o = { ...object };
+  o.name = o.name.toUpperCase();
+  return o;
+}
+
+// console.log(toUpperCase(subjects[0]));
+// console.log(toUpperCase(subjects[1]));
+
+// 3. 과목 이름 "좌우 공백 제거" → "대문자화" 후, 새로운 과목 배열 생성
+// ES5의 map을 사용해야 한다
+// 조건1. 새로운 배열 반환
+// 조건2. 배열 순환 후, 기능 처리(적용)
+
+// const updateSubjects = subjects
+//   .map((subject) => {
+//     const copySubject = toTrim(subject);
+//     return copySubject;
+//   })
+//   .map((subject) => {
+//     const copySubject = toUpperCase(subject);
+//     return copySubject;
+//   });
+
+const updateSubjects = subjects.map(toTrim).map(toUpperCase);
+
+console.log("업데이트 데이터\n", updateSubjects);
 // --------------------------------------------------------------------------
 // JavaScript 프로그래밍 패러다임
 // → 함수(function)를 사용해 구현합니다.
