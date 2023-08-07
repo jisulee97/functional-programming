@@ -157,13 +157,20 @@ function createCountUpButton(container) {
   };
 
   countUpButton.setAttribute("type", "button");
-  render(count);
-
+  countUpButton.classList.add("CountUpButton");
   countUpButton.addEventListener("click", handleCountUp);
+  render(count);
 
   container.append(countUpButton);
 }
 
+createCountUpButton(document.getElementById("demo"));
+createCountUpButton(document.getElementById("demo"));
+createCountUpButton(document.getElementById("demo"));
+createCountUpButton(document.getElementById("demo"));
+createCountUpButton(document.getElementById("demo"));
+createCountUpButton(document.getElementById("demo"));
+createCountUpButton(document.getElementById("demo"));
 createCountUpButton(document.getElementById("demo"));
 
 // --------------------------------------------------------------------------
