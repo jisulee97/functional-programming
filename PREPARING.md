@@ -2,11 +2,15 @@
 
 학습에 필요한 환경이 준비되어 있는 지 확인합니다.
 
+# 프리페어링
+
+학습에 필요한 환경이 준비되어 있는 지 확인합니다.
+
 - [x] [Git v2+](https://git-scm.com/)
 - [x] [Node.js v18+](https://nodejs.dev/en/)
-- [ ] [PNPM v8+](https://pnpm.io/ko/)
-- [ ] [degit v2+](https://github.com/Rich-Harris/degit#readme)
-- [ ] [React Devtools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [x] [PNPM v8+](https://pnpm.io/ko/)
+- [x] [degit v2+](https://github.com/Rich-Harris/degit#readme)
+- [x] [React Devtools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
 ## 프리페이링 실습
 
